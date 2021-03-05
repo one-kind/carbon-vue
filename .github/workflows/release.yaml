@@ -54,4 +54,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn --frozen-lockfile
-      - run: yarn release:docs
+      - run: yarn build:storybook
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: public

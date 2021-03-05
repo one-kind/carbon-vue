@@ -36,8 +36,6 @@
     "lint:fix": "eslint --ext .js,.vue --fix 'src/components/**'",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook -o public",
-    "release:docs": "storybook-to-ghpages",
-    "release:tag": "semantic-delivery-gitlab --token $GITHUB_TOKEN",
     "postinstall": "husky install"
   },
   "peerDependencies": {
@@ -61,7 +59,6 @@
     "@storybook/addon-essentials": "^6.1.21",
     "@storybook/addon-links": "^6.1.21",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/storybook-deployer": "^2.8.7",
     "@storybook/vue": "^6.1.21",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
