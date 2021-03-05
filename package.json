@@ -11,6 +11,9 @@
     "node": ">=14.x",
     "npm": ">=7.x"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "git+https://github.com/one-kind/carbon-vue.git",
   "bugs": {
     "url": "https://github.com/one-kind/carbon-vue/issues"
