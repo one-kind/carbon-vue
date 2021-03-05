@@ -1,0 +1,23 @@
+$prefix: 'bx';
+
+@media (min-width: 42rem) {
+  .#{$prefix}--tabs-trigger {
+      display: none;
+  }
+}
+
+/* .#{$prefix}--form-item {
+  margin-bottom: carbon--mini-units(4);
+  width: 100%;
+}
+ */
+@media (min-width: 42rem) {
+  .#{$prefix}--modal-container .#{$prefix}--modal-header, .#{$prefix}--modal-container .#{$prefix}--modal-content, .#{$prefix}--modal-container .#{$prefix}--modal-content__regular-content {
+    padding-right: var(--cds-spacing-05, 1rem);
+  }
+}
+
+.#{$prefix}--time-picker[data-invalid] .#{$prefix}--time-picker__input-field {
+  outline: 2px solid var(--cds-support-01);
+  outline-offset: -2px;
+}

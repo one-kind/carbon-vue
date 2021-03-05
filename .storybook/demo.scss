@@ -1,0 +1,161 @@
+@import "../src/styles/main.scss";
+
+.bx--grid {
+  &--demo {
+    * {
+      box-sizing: border-box;
+    }
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    b,
+    big,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    center,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    output,
+    p,
+    pre,
+    q,
+    ruby,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    tt,
+    u,
+    ul,
+    var {
+      margin: 0;
+      padding: 0;
+      font: inherit;
+      font-size: 100%;
+      vertical-align: initial;
+      border: 0;
+    }
+
+    margin: 0;
+    flex-grow: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 99rem;
+
+    @media (min-width: 99rem) {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+    @media (min-width: 42rem) {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+    .bx--row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -1rem;
+      margin-left: -1rem;
+    }
+    [class*=col] {
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      font-size: .75rem;
+      font-weight: 400;
+      line-height: 1.34;
+      letter-spacing: .32px;
+      padding-top: 1rem;
+      min-height: 4rem;
+      background-color: #edf5ff;
+      outline: 1px solid #a6c8ff;
+    }
+    .bx--grid--demo--content {
+      height: 100%;
+    }
+    &--wide {
+      [class*=col] {
+        background-color: #d0e2ff;
+        padding-top: 0;
+      }
+      .bx--grid--demo--content {
+        background-color: #edf5ff;
+      }
+    }
+    /*  &.bx--grid--narrow [class*=col] {
+      background-color: #9ef0f0;
+      outline: 1px solid #3ddbd9;
+      padding-top: 0;
+      .bx--grid--demo--content {
+        background-color: #d9fbfb;
+      }
+    } */
+     &.bx--grid--condensed [class*=col] {
+      background-color: #d4bbff;
+      outline: 1px solid #d4bbff;
+      padding-top: .03125rem;
+      padding-bottom: .03125rem;
+      padding-right: .0625rem;
+      padding-left: .0625rem;
+      .bx--grid--demo--content {
+        background-color: #f6f2ff;
+      }
+    }
+  }
+}

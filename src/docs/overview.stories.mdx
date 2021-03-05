@@ -1,0 +1,579 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import Accordion from './assets/Accordion.svg'
+import Breadcrumbs from './assets/Breadcrumbs.svg'
+import Button from './assets/Button.svg'
+import Checkbox from './assets/Checkbox.svg'
+import CodeSnippet from './assets/CodeSnippet.svg'
+import ContentSwitcher from './assets/ContentSwitcher.svg'
+import DataTable from './assets/DataTable.svg'
+import DatePicker from './assets/DatePicker.svg'
+import Dropdown from './assets/Dropdown.svg'
+import FileUploader from './assets/FileUploader.svg'
+import Form from './assets/Form.svg'
+import InlineLoading from './assets/InlineLoading.svg'
+import Link from './assets/Link.svg'
+import List from './assets/List.svg'
+import Loading from './assets/Loading.svg'
+import Modal from './assets/Modal.svg'
+import Multiselect from './assets/Multiselect.svg'
+import Notifications from './assets/Notifications.svg'
+import NumberInput from './assets/NumberInput.svg'
+import Pagination from './assets/Pagination.svg'
+import ProgressIndicator from './assets/ProgressIndicator.svg'
+import OverflowMenu from './assets/OverflowMenu.svg'
+import RadioButton from './assets/RadioButton.svg'
+import Search from './assets/Search.svg'
+import Select from './assets/Select.svg'
+import Slider from './assets/Slider.svg'
+import StructuredList from './assets/StructuredList.svg'
+import Tabs from './assets/Tabs.svg'
+import Tags from './assets/Tags.svg'
+import TextInput from './assets/TextInput.svg'
+import Tile from './assets/Tile.svg'
+import Toggle from './assets/Toggle.svg'
+import Tooltip from './assets/Tooltip.svg'
+import UIShell from './assets/UIShell.svg'
+
+<Meta title="Overview" />
+
+<style>{`
+  * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    --space: 1.5rem;
+  }
+  .bx--grid.Main-module--main.Main-module--padded {
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    min-height: calc(100vh - 40rem);
+    padding-bottom: 10rem;
+    padding-right: 2rem;
+    max-width: 99rem;
+  }
+  h2.PageHeader-module--text {
+    --height: 20rem;
+    color: #000;
+    font: inherit;
+    vertical-align: initial;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-bottom: 2rem;
+    margin-top: auto;
+    line-height: 1.13;
+    font-size: 4.75rem;
+  }
+  h2.AutolinkHeader-module--header {
+    font: inherit;
+    vertical-align: initial;
+    position: relative;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: 66.667%;
+    --space: 5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.25;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  a.AutolinkHeader-module--anchor {
+    --space: 5rem;
+    letter-spacing: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    color: #0062ff;
+    opacity: 0;
+    transition: opacity 70ms cubic-bezier(.2,0,.38,.9);
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+  }
+  .bx--row {
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    margin-bottom: 0;
+    margin-top: var(--space);
+  }
+  .bx--col-lg-12 {
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    width: 100%;
+    display: block;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .component-overview {
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  li {
+    list-style: none;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    background: #fff;
+    position: relative;
+    transition: .11s;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    width: 25%;
+  }
+  .bx--aspect-ratio.bx--aspect-ratio--align.bx--aspect-ratio--1x1 {
+    list-style: none;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    position: relative;
+  }
+  .bx--aspect-ratio--object {
+    list-style: none;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  a.component-item__link {
+    list-style: none;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    color: #0062ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  a.component-item__link img {
+    list-style: none;
+    color: #0062ff;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: initial;
+    max-width: 100%;
+    margin-bottom: 0;
+    background: transparent;
+    display: block;
+  }
+  a.component-item__link .component-name {
+    list-style: none;
+    font: inherit;
+    vertical-align: initial;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1.34;
+    letter-spacing: .32px;
+    color: #161616;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  a.EditLink-module--link {
+    font: inherit;
+    vertical-align: initial;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: .16px;
+    transition: color .11s;
+    color: #525252;
+  }
+`}</style>
+
+<div class="bx--grid Main-module--main Main-module--padded">
+  <h2 class="PageHeader-module--text">Overview</h2>
+  <h2 class="AutolinkHeader-module--header Markdown-module--h2--3_kQn" id="building-blocks">
+    <a class="AutolinkHeader-module--anchor" href="">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M29.25,6.76a6,6,0,0,0-8.5,0l1.42,1.42a4,4,0,1,1,5.67,5.67l-8,8a4,4,0,1,1-5.67-5.66l1.41-1.42-1.41-1.42-1.42,1.42a6,6,0,0,0,0,8.5A6,6,0,0,0,17,25a6,6,0,0,0,4.27-1.76l8-8A6,6,0,0,0,29.25,6.76Z">
+        </path>
+        <path d="M4.19,24.82a4,4,0,0,1,0-5.67l8-8a4,4,0,0,1,5.67,0A3.94,3.94,0,0,1,19,14a4,4,0,0,1-1.17,2.85L15.71,19l1.42,1.42,2.12-2.12a6,6,0,0,0-8.51-8.51l-8,8a6,6,0,0,0,0,8.51A6,6,0,0,0,7,28a6.07,6.07,0,0,0,4.28-1.76L9.86,24.82A4,4,0,0,1,4.19,24.82Z">
+        </path>
+      </svg>
+    </a>
+    Building blocks
+  </h2>
+  <div class="bx--row">
+    <p class="Markdown-module--paragraph--1xZR9 Markdown-module--paragraph--responsive--103Tj">Components are one of the key building blocks of the design system. Each
+      component has been designed and coded to solve a specific UI problem, such as
+      presenting a list of options, enabling submission of a form, providing feedback
+      to the user, and so on. All of the components in Carbon have been designed to
+      work harmoniously together, as parts of a greater whole.
+    </p>
+  </div>
+  <div class="bx--row">
+    <div class="bx--col-lg-12 bx--no-gutter">
+      <ul class="component-overview">
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-accordion--default">
+                <img src={Accordion} alt="Accordion" class="component-item__img" />
+                <p class="component-name">Accordion</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-breadcrumb--default">
+                <img src={Breadcrumbs} alt="Breadcrumbs" class="component-item__img" />
+                <p class="component-name">Breadcrumbs</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-button--primary">
+                <img src={Button} alt="Button" class="component-item__img" />
+                <p class="component-name">Button</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-checkbox--default">
+                <img src={Checkbox} alt="Checkbox" class="component-item__img" />
+                <p class="component-name">Checkbox</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-codesnippet--default">
+                <img src={CodeSnippet} alt="Code snippet" class="component-item__img" />
+                <p class="component-name">Code snippet</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-contentswitcher--default">
+                <img src={ContentSwitcher} alt="Content switcher" class="component-item__img" />
+                <p class="component-name">Content switcher</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-datatable--default">
+                <img src={DataTable} alt="Data table" class="component-item__img" />
+                <p class="component-name">Data table</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-date-picker--default">
+                <img src={DatePicker} alt="Date picker" class="component-item__img" />
+                <p class="component-name">Date picker</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-dropdown--default">
+                <img src={Dropdown} alt="Dropdown" class="component-item__img" />
+                <p class="component-name">Dropdown</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-file-uploader--default">
+                <img src={FileUploader} alt="File uploader" class="component-item__img" />
+                <p class="component-name">File uploader</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-form--default">
+                <img src={Form} alt="Form" class="component-item__img" />
+                <p class="component-name">Form</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-inline-loading--default">
+                <img src={InlineLoading} alt="Inline loading" class="component-item__img" />
+                <p class="component-name">Inline loading</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-link--default">
+                <img src={Link} alt="Link" class="component-item__img" />
+                <p class="component-name">Link</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-list--default">
+                <img src={List} alt="List" class="component-item__img" />
+                <p class="component-name">List</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-loading--default">
+                <img src={Loading} alt="Loading" class="component-item__img" />
+                <p class="component-name">Loading</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-modal--default">
+                <img src={Modal} alt="Modal" class="component-item__img" />
+                <p class="component-name">Modal</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-dropdown--default">
+                <img src={Multiselect} alt="Multiselect" class="component-item__img" />
+                <p class="component-name">Multiselect</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-toastnotification--default">
+                <img src={Notifications} alt="Notification" class="component-item__img" />
+                <p class="component-name">Notification</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-number-input--default">
+                <img src={NumberInput} alt="Number input" class="component-item__img" />
+                <p class="component-name">Number input</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/extras-pagination--default">
+                <img src={Pagination} alt="Pagination" class="component-item__img" />
+                <p class="component-name">Pagination</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-progress-indicator--default">
+                <img src={ProgressIndicator} alt="Progress indicator" class="component-item__img" />
+                <p class="component-name">Progress indicator</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-overflow-menu--default">
+                <img src={OverflowMenu} alt="Overflow menu" class="component-item__img" />
+                <p class="component-name">Overflow menu</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-radiobutton--default">
+                <img src={RadioButton} alt="Radio button" class="component-item__img" />
+                <p class="component-name">Radio button</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-search--default">
+                <img src={Search} alt="Search" class="component-item__img" />
+                <p class="component-name">Search</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-select--default">
+                <img src={Select} alt="Select" class="component-item__img" />
+                <p class="component-name">Select</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-slider--default">
+                <img src={Slider} alt="Slider" class="component-item__img" />
+                <p class="component-name">Slider</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-structured-list--default">
+                <img src={StructuredList} alt="Structured list" class="component-item__img" />
+                <p class="component-name">Structured list</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-tabs--default">
+                <img src={Tabs} alt="Tabs" class="component-item__img" />
+                <p class="component-name">Tabs</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-tag--default">
+                <img src={Tags} alt="Tag" class="component-item__img" />
+                <p class="component-name">Tag</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-textinput--enabled">
+                <img src={TextInput} alt="Text input" class="component-item__img" />
+                <p class="component-name">Text input</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-tile--default">
+                <img src={Tile} alt="Tile" class="component-item__img" />
+                <p class="component-name">Tile</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-toggle--default">
+                <img src={Toggle} alt="Toggle" class="component-item__img" />
+                <p class="component-name">Toggle</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/components-tooltip--default-interactive">
+                <img src={Tooltip} alt="Tooltip" class="component-item__img" />
+                <p class="component-name">Tooltip</p>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="component-item">
+          <div class="bx--aspect-ratio bx--aspect-ratio--align bx--aspect-ratio--1x1">
+            <div class="bx--aspect-ratio--object">
+              <a class="component-item__link" href="/?path=/story/extras-uishell--header-base">
+                <img src={UIShell} alt="UI shell" class="component-item__img" />
+                <p class="component-name">UI shell</p>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

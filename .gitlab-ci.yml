@@ -1,0 +1,61 @@
+stages:
+  - test
+  - docs
+  - deploy
+  - release
+
+cache:
+  paths:
+    - node_modules/
+
+unit:
+  before_script:
+    - yarn install --frozen-lockfile
+  image: node:14
+  stage: test
+  script:
+    - yarn test
+  artifacts:
+    paths:
+    - coverage
+    - report
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+
+pages:
+  before_script:
+    - yarn install --frozen-lockfile
+  image: node:14
+  stage: docs
+  script:
+    - yarn build:storybook
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+
+tag:
+  before_script:
+    - yarn install --frozen-lockfile
+  image: node:14
+  stage: release
+  script:
+    - yarn release:tag
+  artifacts:
+    paths:
+    - dist
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+
+publish:
+  before_script:
+    - echo '//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}'>.npmrc
+    - yarn install --frozen-lockfile
+  image: node:14
+  stage: release
+  script:
+    - yarn build
+    - yarn release:publish
+  rules:
+    - if: '$CI_COMMIT_TAG != null'

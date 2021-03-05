@@ -1,0 +1,49 @@
+@import '@carbon/themes/scss/themes';
+
+$carbon--theme--light: $carbon--theme--white !default;
+$carbon--theme--g10: $carbon--theme--g10 !default;
+$carbon--theme--g90: $carbon--theme--g90 !default;
+$carbon--theme--g100: $carbon--theme--g100 !default;
+
+/* color */
+:root {
+  @each $key_name, $value in $carbon--theme--white {
+    @if not (type-of($value) == 'map') {
+      --cds-#{$key_name}: #{$value};
+    }
+  }
+}
+
+.carbon-theme--light,
+.carbon-theme--white {
+  @each $key_name, $value in $carbon--theme--white {
+    @if not (type-of($value) == 'map') {
+      --cds-#{$key_name}: #{$value};
+    }
+  }
+}
+
+.carbon-theme--g10 {
+  @each $key_name, $value in $carbon--theme--g10 {
+    @if not (type-of($value) == 'map') {
+      --cds-#{$key_name}: #{$value};
+    }
+  }
+}
+
+.carbon-theme--g90 {
+  @each $key_name, $value in $carbon--theme--g90 {
+    @if not (type-of($value) == 'map') {
+      --cds-#{$key_name}: #{$value};
+    }
+  }
+}
+
+.carbon-theme--dark,
+.carbon-theme--g100 {
+  @each $key_name, $value in $carbon--theme--g100 {
+    @if not (type-of($value) == 'map') {
+      --cds-#{$key_name}: #{$value};
+    }
+  }
+}

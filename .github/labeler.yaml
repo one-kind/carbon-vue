@@ -1,0 +1,23 @@
+components:
+  - 'src/components/*'
+
+directives:
+  - 'src/directives/*'
+
+documentation:
+  - 'src/**/*.stories.*'
+  - ./**/*.md
+
+github: .github/*
+
+mixins:
+  - 'src/mixins/*'
+
+styles:
+  - 'src/styles/*'
+
+repo:
+  - ./*
+
+test:
+  - 'src/**/*.{spec,test}.js'

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <title>back</title>
+      <stop offset="0" style="stop-color: rgb(0, 136, 223);"/>
+      <stop offset="0.627" style="stop-color: rgb(0, 147, 215);"/>
+      <stop offset="1" style="stop-color: rgba(76, 171, 188, 0);"/>
+    </linearGradient>
+    <linearGradient id="gradient-0">
+      <title>front</title>
+      <stop style="stop-color: rgb(0, 136, 223);" offset="0"/>
+      <stop style="stop-color: rgb(0, 171, 195);" offset="0.391"/>
+      <stop style="stop-color: rgb(0, 171, 195);" offset="1"/>
+    </linearGradient>
+    <linearGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" x1="348.305" y1="158.656" x2="348.305" y2="482.348" gradientTransform="matrix(0.863191, 0.504877, -0.50571, 0.862459, 291.579617, -108.508395)" xlink:href="#gradient-1"/>
+    <linearGradient id="gradient-0-0" gradientUnits="userSpaceOnUse" x1="19.258" y1="19.815" x2="19.258" y2="343.507" gradientTransform="matrix(0.941838, -0.336067, 0.340003, 0.95287, 213.580047, 161.502029)" xlink:href="#gradient-0"/>
+  </defs>
+  <rect width="512" height="512" style="fill: rgb(29, 29, 29); visibility: hidden;"/>
+  <g transform="matrix(0.821245, 0, 0, -0.821245, 82.418167, 465.334259)" style="">
+    <title>VUE</title>
+    <path d="M 178.06 235.01 L 155.391 195.746 L 132.722 235.01 L 57.231 235.01 L 155.391 64.99 L 253.551 235.01 Z" style="fill: none; stroke-width: 9.74131px; stroke: rgb(6, 31, 128);"/>
+    <path d="M 178.06 235.01 L 155.391 195.746 L 132.722 235.01 L 96.495 235.01 L 155.391 133 L 214.287 235.01 Z" style="fill: none; stroke-width: 9.74131px; stroke: rgb(6, 31, 128);"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -137.975372, 18.621681)" style="">
+    <title>Gradient</title>
+    <path d="M 275.144 200.958 L 348.704 161.212 L 472.85 230.429 L 473.898 376.192 L 348.705 446.902" style="fill: none; paint-order: fill; stroke-linejoin: round; stroke: url(#gradient-1-0); stroke-width: 30px;" transform="matrix(1, 0.000005, -0.000005, 1, 0.00152, -0.001873)">
+      <title>back</title>
+    </path>
+    <path d="M 348.704 445.902 L 225.331 373.725 L 226.121 230.331 L 278.334 199.318" style="fill: none; paint-order: fill; stroke-linejoin: round; stroke: url(#gradient-0-0); stroke-width: 30px;" transform="matrix(1, 0.000005, -0.000005, 1, 0.00168, -0.001408)">
+      <title>front</title>
+    </path>
+  </g>
+  <path d="M 270.955 50.45 C 277.484 46.174 286.345 44.9 293.054 48.864 L 413.987 117.786 C 420.697 121.751 424.465 126.99 424.645 135.23 L 424.084 277.333 L 392.971 277.209 L 393.01 140.632 L 284.535 78.806 L 167.988 146.143 L 152.17 118.116 L 270.955 50.45 Z" style="stroke-linejoin: round; stroke-linecap: round; fill: rgb(6, 31, 128);"/>
+  <path d="M 270.955 50.45 C 277.484 46.174 286.345 44.9 293.054 48.864 L 413.987 117.786 C 420.697 121.751 424.465 126.99 424.645 135.23 L 424.084 277.333 L 392.971 277.209 L 393.01 140.632 L 284.535 78.806 L 167.988 146.143 L 152.17 118.116 L 270.955 50.45 Z" style="stroke-linejoin: round; stroke-linecap: round; fill: rgb(255, 255, 255); visibility: hidden;"/>
+</svg>
