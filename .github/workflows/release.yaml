@@ -35,6 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
   Docs:
+    if: github.ref == 'refs/heads/main'
     needs: [Release]
     runs-on: ubuntu-latest
     steps:
