@@ -37,3 +37,8 @@ test
 *.ntvs*
 *.njsprojdddd
 *.sln
+commitlint.config.js
+.eslintrc
+.github
+.husky
+.releaserc
