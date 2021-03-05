@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: ['main', 'beta', 'alpha']
+    branches: ['master', 'beta', 'alpha']
 
 env:
   NODE_VERSION: '14'
@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
   Docs:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: [Release]
     runs-on: ubuntu-latest
     steps:

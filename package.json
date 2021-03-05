@@ -36,7 +36,7 @@
     "lint:fix": "eslint --ext .js,.vue --fix 'src/components/**'",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook -o public",
-    "release:docs": "storybook-to-ghpages --source-branch=main",
+    "release:docs": "storybook-to-ghpages",
     "release:tag": "semantic-delivery-gitlab --token $GITHUB_TOKEN",
     "postinstall": "husky install"
   },
