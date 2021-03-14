@@ -4,7 +4,7 @@
 
 An opinionated Vue implementation of IBM™ [Carbon Design System](http://www.carbondesignsystem.com/) version 10.
 
-See them in action [here](https://one-kind.github.io/carbon-vue/)
+See them in action [here](https://one-kind.github.io/carbon-vue/?path=/story/overview--page)
 
 - [Project setup](#project-setup)
   - [Using storybook for development](#using-storybook-for-development)

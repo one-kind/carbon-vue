@@ -36,7 +36,7 @@
     "lint:fix": "eslint --ext .js,.vue --fix 'src/components/**'",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook -o public",
-    "postinstall": "husky install"
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "vue": "^2"
