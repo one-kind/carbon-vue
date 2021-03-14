@@ -4,6 +4,8 @@
 
 An opinionated Vue implementation of IBM™ [Carbon Design System](http://www.carbondesignsystem.com/) version 10.
 
+See them in action [here](https://one-kind.github.io/carbon-vue/?path=/story/overview--page)
+
 - [Project setup](#project-setup)
   - [Using storybook for development](#using-storybook-for-development)
   - [Compiles and minifies for production](#compiles-and-minifies-for-production)
@@ -18,31 +20,31 @@ An opinionated Vue implementation of IBM™ [Carbon Design System](http://www.ca
 ## Project setup
 
 ```bash
-npm install
+yarn
 ```
 
 ### Using storybook for development
 
 ```bash
-npm run storybook
+yarn storybook
 ```
 
 ### Compiles and minifies for production
 
 ```bash
-npm run build
+yarn build
 ```
 
 ### Run your unit tests
 
 ```bash
-npm run test:unit
+yarn test:unit
 ```
 
 ### Lints and fixes files
 
 ```bash
-npm run lint
+yarn lint
 ```
 
 ## Using Carbon Vue in your project
